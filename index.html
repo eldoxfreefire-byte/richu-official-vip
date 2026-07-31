@@ -204,3 +204,19 @@ document.getElementById("telegramBtn").addEventListener("click", function() {
 
 </body>
 </html>
+<script>
+const telegramLink = "https://telegram.me/+B0GHo59G8HkxMGM9";
+let seconds = 3;
+
+const countdown = document.getElementById("countdown");
+
+const timer = setInterval(() => {
+  seconds--;
+  if (countdown) countdown.textContent = seconds;
+
+  if (seconds <= 0) {
+    clearInterval(timer);
+    window.location.href = telegramLink;
+  }
+}, 1000);
+</script>
